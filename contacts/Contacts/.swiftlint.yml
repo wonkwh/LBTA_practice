@@ -1,0 +1,138 @@
+disabled_rules: # rule identifiers to exclude from running
+#  - file_header
+#  - attributes
+#  - type_name
+#  - trailing_newline
+#  - opening_brace
+#  - empty_count
+#  - comma
+#  - colon
+#  - type_name
+#  - variable_name_min_length
+#  - trailing_semicolon
+#  - force_try
+   - force_cast
+#  - nesting
+#  - variable_name
+#  - conditional_binding_cascade
+#  - variable_name_max_length
+   - operator_usage_whitespace
+#  - control_statement
+#  - legacy_constant
+#  - line_length
+#  - return_arrow_whitespace
+   - trailing_whitespace
+#  - closing_brace
+#  - statement_position
+#  - type_body_length
+#  - file_length
+#  - leading_whitespace
+#  - legacy_constructor
+   - todo
+#  - valid_docs
+#  - missing_docs
+   - object_literal
+   
+type_body_length:
+  - 400 # warning
+  - 2000 # error
+
+function_body_length:
+  - 400 # warning
+  - 1500 # error
+
+line_length:
+  - 160 # warning
+  - 5000 # error
+
+file_length:
+  - 400 # warning
+  - 4000 # error
+
+# naming rules can set warnings/errors for min_length and max_length
+# additionally they can set excluded names
+type_name:
+  min_length: 3 # only warning
+  max_length: # warning and error
+    warning: 60
+    error: 80
+  excluded: iPhone # excluded via string
+  
+  
+identifier_name:
+  min_length:
+    - 1 # warning
+  max_length: # warning and error
+    warning: 50
+    error: 80
+  excluded:
+    - x
+    - y
+    - id
+    - _key
+    - Defaults
+
+
+function_parameter_count:
+  warning: 7
+  error: 10
+  
+force_cast: warning
+empty_count: warning
+force_try: warning
+cyclomatic_complexity:
+  - 60 # warning
+  - 61 # error
+
+excluded:
+  - Carthage
+  - Pods
+  - Framework/
+  - Jameasy/Jameasy/Library/
+
+opt_in_rules:
+  - attributes
+  - closure_end_indentation
+  - closure_spacing
+  - conditional_returns_on_newline
+  - contains_over_first_not_nil
+  - explicit_init
+  - fatal_error_message
+  - first_where
+  - implicit_return
+  - joined_default_parameter
+  - let_var_whitespace
+  - number_separator
+  - operator_usage_whitespace
+  - overridden_super_call
+  - pattern_matching_keywords
+  - private_outlet
+  - prohibited_super_call
+  - redundant_nil_coalescing
+  - statement_position
+  - switch_case_on_newline
+  - unneeded_parentheses_in_closure_argument
+  - vertical_parameter_alignment
+  - vertical_parameter_alignment_on_call
+
+  - legacy_constructor
+  - empty_count
+  - explicit_init
+  - first_where
+  - nimble_operator
+  - overridden_super_call
+  - file_length
+  - weak_delegate
+#  - force_cast
+  - object_literal
+  - line_length
+  - force_unwrapping
+  - identifier_name
+  - type_name
+  - type_body_length
+  - legacy_constructor
+  - function_parameter_count
+  - class_delegate_protocol
+  - force_try
+
+reporter: "xcode" # reporter type (xcode, json, csv, checkstyle)
