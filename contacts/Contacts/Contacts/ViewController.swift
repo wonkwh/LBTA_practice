@@ -11,8 +11,14 @@ import UIKit
 class ViewController: UITableViewController {
 
     let cellID = "cellID"
-    let heroNames = ["kwanghyun", "jihoon", "wonhee", "sunghun"]
-    let anotherHeroNames = ["parkjin", "sengwoo", "hyungeun"]
+    //let heroNames = ["kwanghyun", "jihoon", "wonhee", "sunghun"]
+    //let anotherHeroNames = ["parkjin", "sengwoo", "hyungeun"]
+
+    let twoDimentionalArray = [
+        ["kwanghyun", "jihoon", "wonhee", "sunghun"],
+        ["parkjin", "sengwoo", "hyungeun"],
+        ["lee", "lee2"]
+    ]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,19 +43,17 @@ extension ViewController {
     }
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
+        return twoDimentionalArray.count
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if section == 0 {
-            return heroNames.count
-        }
-        return anotherHeroNames.count
+        return twoDimentionalArray[section].count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellID, for: indexPath)
-        cell.textLabel?.text = (indexPath.section == 0) ? heroNames[indexPath.row] : anotherHeroNames[indexPath.row]
+        let name = twoDimentionalArray[indexPath.section][indexPath.row]
+        cell.textLabel?.text = "\(name) section:\(indexPath.section) row:\(indexPath.row)"
         return cell
     }
 }
