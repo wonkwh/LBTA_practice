@@ -11,6 +11,7 @@
 		89CC101C21F53E8E0012AB3D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89CC101B21F53E8E0012AB3D /* ViewController.swift */; };
 		89CC102121F53E8F0012AB3D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89CC102021F53E8F0012AB3D /* Assets.xcassets */; };
 		89CC102421F53E8F0012AB3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89CC102221F53E8F0012AB3D /* LaunchScreen.storyboard */; };
+		89CC102D21F55FDD0012AB3D /* CanvasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89CC102C21F55FDD0012AB3D /* CanvasView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +21,7 @@
 		89CC102021F53E8F0012AB3D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		89CC102321F53E8F0012AB3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89CC102521F53E8F0012AB3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		89CC102C21F55FDD0012AB3D /* CanvasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,13 +54,30 @@
 		89CC101821F53E8E0012AB3D /* DrawPad */ = {
 			isa = PBXGroup;
 			children = (
+				89CC102E21F5601B0012AB3D /* Controller */,
+				89CC102B21F55FC80012AB3D /* Views */,
 				89CC101921F53E8E0012AB3D /* AppDelegate.swift */,
-				89CC101B21F53E8E0012AB3D /* ViewController.swift */,
 				89CC102021F53E8F0012AB3D /* Assets.xcassets */,
 				89CC102221F53E8F0012AB3D /* LaunchScreen.storyboard */,
 				89CC102521F53E8F0012AB3D /* Info.plist */,
 			);
 			path = DrawPad;
+			sourceTree = "<group>";
+		};
+		89CC102B21F55FC80012AB3D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				89CC102C21F55FDD0012AB3D /* CanvasView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		89CC102E21F5601B0012AB3D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				89CC101B21F53E8E0012AB3D /* ViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -133,6 +152,7 @@
 			files = (
 				89CC101C21F53E8E0012AB3D /* ViewController.swift in Sources */,
 				89CC101A21F53E8E0012AB3D /* AppDelegate.swift in Sources */,
+				89CC102D21F55FDD0012AB3D /* CanvasView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

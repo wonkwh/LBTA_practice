@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  CanvasView.swift
 //  DrawPad
 //
 //  Created by wonkwh on 21/01/2019.
@@ -20,12 +20,12 @@ class CanvasView: UIView {
             return
         }
         
-//        let startPoint = CGPoint(x: 0, y: 0)
-//        let endPoint = CGPoint(x: 100, y: 100)
-//
-//        context.move(to: startPoint)
-//        context.addLine(to: endPoint)
-    
+        //        let startPoint = CGPoint(x: 0, y: 0)
+        //        let endPoint = CGPoint(x: 100, y: 100)
+        //
+        //        context.move(to: startPoint)
+        //        context.addLine(to: endPoint)
+        
         context.setStrokeColor(UIColor.red.cgColor)
         context.setLineWidth(10)
         context.setLineCap(.round)
@@ -51,28 +51,13 @@ class CanvasView: UIView {
     
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
         guard let point = touches.first?.location(in: nil) else { return }
-            
+        
         guard var lastLine = lines.popLast() else { return }
-    
+        
         lastLine.append(point)
         lines.append(lastLine)
-            //lines.append(point)
-            setNeedsDisplay()
+        //lines.append(point)
+        setNeedsDisplay()
         
     }
 }
-
-
-class ViewController: UIViewController {
-
-    let canvasView = CanvasView()
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        view.addSubview(canvasView)
-        canvasView.backgroundColor = .white
-        canvasView.frame = view.frame
-    }
-}
-
