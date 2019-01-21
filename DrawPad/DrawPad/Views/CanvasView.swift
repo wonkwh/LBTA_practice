@@ -10,7 +10,9 @@ import UIKit
 
 class CanvasView: UIView {
     
-    var lines = [[CGPoint]]()
+    private var lines = [[CGPoint]]()
+    fileprivate var strokeColor = UIColor.black.cgColor
+    fileprivate var lineWidth: CGFloat  = 1.0
     
     override func draw(_ rect: CGRect) {
         //custom drawing
@@ -26,8 +28,8 @@ class CanvasView: UIView {
         //        context.move(to: startPoint)
         //        context.addLine(to: endPoint)
         
-        context.setStrokeColor(UIColor.red.cgColor)
-        context.setLineWidth(10)
+        context.setStrokeColor(strokeColor)
+        context.setLineWidth(lineWidth)
         context.setLineCap(.round)
         
         
@@ -58,6 +60,23 @@ class CanvasView: UIView {
         lines.append(lastLine)
         //lines.append(point)
         setNeedsDisplay()
-        
+    }
+    
+    func undo() {
+        _ = lines.popLast()
+        setNeedsDisplay()
+    }
+    
+    func clear() {
+        lines.removeAll()
+        setNeedsDisplay()
+    }
+    
+    func setStrokeColor(color: UIColor) {
+        strokeColor = color.cgColor
+    }
+    
+    func setStrokeWidth(width: CGFloat) {
+        lineWidth = width
     }
 }
