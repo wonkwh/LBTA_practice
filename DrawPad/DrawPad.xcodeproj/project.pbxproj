@@ -12,6 +12,7 @@
 		89CC102121F53E8F0012AB3D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89CC102021F53E8F0012AB3D /* Assets.xcassets */; };
 		89CC102421F53E8F0012AB3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89CC102221F53E8F0012AB3D /* LaunchScreen.storyboard */; };
 		89CC102D21F55FDD0012AB3D /* CanvasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89CC102C21F55FDD0012AB3D /* CanvasView.swift */; };
+		89CC103121F56E8C0012AB3D /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89CC103021F56E8C0012AB3D /* Line.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		89CC102321F53E8F0012AB3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89CC102521F53E8F0012AB3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		89CC102C21F55FDD0012AB3D /* CanvasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasView.swift; sourceTree = "<group>"; };
+		89CC103021F56E8C0012AB3D /* Line.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Line.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 		89CC101821F53E8E0012AB3D /* DrawPad */ = {
 			isa = PBXGroup;
 			children = (
+				89CC102F21F56E770012AB3D /* Models */,
 				89CC102E21F5601B0012AB3D /* Controller */,
 				89CC102B21F55FC80012AB3D /* Views */,
 				89CC101921F53E8E0012AB3D /* AppDelegate.swift */,
@@ -78,6 +81,14 @@
 				89CC101B21F53E8E0012AB3D /* ViewController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		89CC102F21F56E770012AB3D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				89CC103021F56E8C0012AB3D /* Line.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,6 +162,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				89CC101C21F53E8E0012AB3D /* ViewController.swift in Sources */,
+				89CC103121F56E8C0012AB3D /* Line.swift in Sources */,
 				89CC101A21F53E8E0012AB3D /* AppDelegate.swift in Sources */,
 				89CC102D21F55FDD0012AB3D /* CanvasView.swift in Sources */,
 			);

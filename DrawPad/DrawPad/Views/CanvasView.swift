@@ -10,7 +10,7 @@ import UIKit
 
 class CanvasView: UIView {
     
-    private var lines = [[CGPoint]]()
+    fileprivate var lines = [Line]()
     fileprivate var strokeColor = UIColor.black.cgColor
     fileprivate var lineWidth: CGFloat  = 1.0
     
@@ -22,41 +22,33 @@ class CanvasView: UIView {
             return
         }
         
-        //        let startPoint = CGPoint(x: 0, y: 0)
-        //        let endPoint = CGPoint(x: 100, y: 100)
-        //
-        //        context.move(to: startPoint)
-        //        context.addLine(to: endPoint)
-        
-        context.setStrokeColor(strokeColor)
-        context.setLineWidth(lineWidth)
-        context.setLineCap(.round)
-        
-        
         lines.forEach { (line) in
-            for (index, point) in line.enumerated() {
+            context.setStrokeColor(line.color)
+            context.setLineWidth(line.strokeWidth)
+            context.setLineCap(.round)
+            
+            for (index, point) in line.points.enumerated() {
                 if index == 0 {
                     context.move(to: point)
                 } else {
                     context.addLine(to: point)
                 }
             }
+            
+            context.strokePath()
         }
-        
-        context.strokePath()
     }
     
     //track the finger
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        lines.append([CGPoint]())
+        lines.append(Line.init(strokeWidth: lineWidth, color: strokeColor, points: []))
     }
     
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
         guard let point = touches.first?.location(in: nil) else { return }
         
         guard var lastLine = lines.popLast() else { return }
-        
-        lastLine.append(point)
+        lastLine.points.append(point)
         lines.append(lastLine)
         //lines.append(point)
         setNeedsDisplay()
