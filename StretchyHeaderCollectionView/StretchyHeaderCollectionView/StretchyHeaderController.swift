@@ -11,7 +11,7 @@ import UIKit
 
 class StretchyHeaderController: UICollectionViewController {
 
-    fileprivate let cellId = "CellId"
+    fileprivate let cellId = "cellId"
     fileprivate let headerId = "headerId"
     
     fileprivate let padding: CGFloat = 16
@@ -64,11 +64,11 @@ class StretchyHeaderController: UICollectionViewController {
 // MARK: - UICollectionViewDelegateFlowLayout
 extension StretchyHeaderController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return .init(width: collectionView.frame.width - (2 * padding), height: 50)
+        return .init(width: view.frame.width - (2 * padding), height: 50)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
-        return .init(width: view.frame.width, height: 200)
+        return .init(width: view.frame.width, height: 340)
     }
 }
 

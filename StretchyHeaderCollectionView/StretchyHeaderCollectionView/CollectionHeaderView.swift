@@ -10,9 +10,18 @@ import UIKit
 
 class CollectionHeaderView: UICollectionReusableView {
     
+    let imageView: UIImageView = {
+        let iv = UIImageView(image: #imageLiteral(resourceName: "stretchy_header"))
+        iv.contentMode = .scaleAspectFill
+        return iv
+    }()
+
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
-        backgroundColor = .red
+        
+        addSubview(imageView)
+        imageView.fillSuperview()
     }
     
     required init?(coder aDecoder: NSCoder) {

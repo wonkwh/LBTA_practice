@@ -12,6 +12,7 @@
 		89DA14E421F84183008910EC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89DA14E221F84183008910EC /* LaunchScreen.storyboard */; };
 		89DA14EC21F84276008910EC /* StretchyHeaderController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DA14EB21F84276008910EC /* StretchyHeaderController.swift */; };
 		89DA14EE21F85A7C008910EC /* CollectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DA14ED21F85A7C008910EC /* CollectionHeaderView.swift */; };
+		89DA14F021F85FED008910EC /* Extensions+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DA14EF21F85FED008910EC /* Extensions+UIView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		89DA14E521F84183008910EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		89DA14EB21F84276008910EC /* StretchyHeaderController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StretchyHeaderController.swift; sourceTree = "<group>"; };
 		89DA14ED21F85A7C008910EC /* CollectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionHeaderView.swift; sourceTree = "<group>"; };
+		89DA14EF21F85FED008910EC /* Extensions+UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extensions+UIView.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 		89DA14D821F84182008910EC /* StretchyHeaderCollectionView */ = {
 			isa = PBXGroup;
 			children = (
+				89DA14EF21F85FED008910EC /* Extensions+UIView.swift */,
 				89DA14D921F84182008910EC /* AppDelegate.swift */,
 				89DA14E021F84183008910EC /* Assets.xcassets */,
 				89DA14E221F84183008910EC /* LaunchScreen.storyboard */,
@@ -136,6 +139,7 @@
 			files = (
 				89DA14EE21F85A7C008910EC /* CollectionHeaderView.swift in Sources */,
 				89DA14EC21F84276008910EC /* StretchyHeaderController.swift in Sources */,
+				89DA14F021F85FED008910EC /* Extensions+UIView.swift in Sources */,
 				89DA14DA21F84182008910EC /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
