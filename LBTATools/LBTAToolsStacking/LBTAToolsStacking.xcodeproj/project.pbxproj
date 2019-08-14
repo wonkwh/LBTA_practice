@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		0880AA0DFF78214EB5F42BA2 /* Pods_LBTAToolsStacking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 384C3F4D29129AC2AB195C76 /* Pods_LBTAToolsStacking.framework */; };
+		8988195523046CC900E51745 /* NodeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8988195423046CC900E51745 /* NodeController.swift */; };
+		8988195723047CF600E51745 /* ASStackView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8988195623047CF600E51745 /* ASStackView+.swift */; };
+		8988195923047DBD00E51745 /* ASDisplayNode+Stacking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8988195823047DBD00E51745 /* ASDisplayNode+Stacking.swift */; };
 		C7516FB12285E9ED004F5452 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7516FB02285E9ED004F5452 /* AppDelegate.swift */; };
 		C7516FB32285E9ED004F5452 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7516FB22285E9ED004F5452 /* ViewController.swift */; };
 		C7516FB62285E9ED004F5452 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7516FB42285E9ED004F5452 /* Main.storyboard */; };
@@ -18,6 +21,9 @@
 /* Begin PBXFileReference section */
 		0C0555AB530CE758774E625D /* Pods-LBTAToolsStacking.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LBTAToolsStacking.debug.xcconfig"; path = "Target Support Files/Pods-LBTAToolsStacking/Pods-LBTAToolsStacking.debug.xcconfig"; sourceTree = "<group>"; };
 		384C3F4D29129AC2AB195C76 /* Pods_LBTAToolsStacking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LBTAToolsStacking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8988195423046CC900E51745 /* NodeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NodeController.swift; sourceTree = "<group>"; };
+		8988195623047CF600E51745 /* ASStackView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ASStackView+.swift"; sourceTree = "<group>"; };
+		8988195823047DBD00E51745 /* ASDisplayNode+Stacking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ASDisplayNode+Stacking.swift"; sourceTree = "<group>"; };
 		C7516FAD2285E9ED004F5452 /* LBTAToolsStacking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LBTAToolsStacking.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7516FB02285E9ED004F5452 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C7516FB22285E9ED004F5452 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -76,6 +82,9 @@
 				C7516FB72285E9EE004F5452 /* Assets.xcassets */,
 				C7516FB92285E9EE004F5452 /* LaunchScreen.storyboard */,
 				C7516FBC2285E9EE004F5452 /* Info.plist */,
+				8988195423046CC900E51745 /* NodeController.swift */,
+				8988195623047CF600E51745 /* ASStackView+.swift */,
+				8988195823047DBD00E51745 /* ASDisplayNode+Stacking.swift */,
 			);
 			path = LBTAToolsStacking;
 			sourceTree = "<group>";
@@ -204,7 +213,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				C7516FB32285E9ED004F5452 /* ViewController.swift in Sources */,
+				8988195923047DBD00E51745 /* ASDisplayNode+Stacking.swift in Sources */,
+				8988195723047CF600E51745 /* ASStackView+.swift in Sources */,
 				C7516FB12285E9ED004F5452 /* AppDelegate.swift in Sources */,
+				8988195523046CC900E51745 /* NodeController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
