@@ -11,10 +11,28 @@ import LBTATools
 
 class SimpleVerticalStackCell: UICollectionViewCell {
     
+    let imageView = UIImageView(image: #imageLiteral(resourceName: "girl.png"), contentMode: .scaleAspectFill)
+    let nameLabel = UILabel(text: "Girl", textAlignment: .center)
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        backgroundColor = .yellow
+//        imageView.widthAnchor.constraint(equalToConstant: 60).isActive = true
+//        imageView.heightAnchor.constraint(equalToConstant: 60).isActive = true
+//
+//        let stackView = UIStackView(arrangedSubviews: [imageView, nameLabel])
+//        stackView.distribution = .fillEqually
+//        stackView.axis = .vertical
+//        stackView.alignment = .center
+//        stackView.fillSuperview()
+//
+//        addSubview(stackView)
+        
+        stack(imageView.withSize(.init(width: 80, height: 80)),
+              nameLabel,
+              alignment: .center).padTop(8)
+        
+        layer.borderWidth = 0.5
     }
     
     required init?(coder aDecoder: NSCoder) {
