@@ -7,12 +7,14 @@
 
 import AsyncDisplayKit
 
+let Divider = ASDisplayNode()
+
 extension ASDisplayNode {
     
     fileprivate func _stack(_ direction: ASStackLayoutDirection = .vertical,
                             nodes: [ASLayoutElement],
                             spacing: CGFloat = 0,
-                            alignment: ASStackLayoutAlignItems = .stretch) -> ASStackLayoutSpec {
+                            alignment: ASStackLayoutAlignItems) -> ASStackLayoutSpec {
 //        let stackView = UIStackView(arrangedSubviews: views)
         
           let stackView = ASStackLayoutSpec()
@@ -49,7 +51,7 @@ extension ASDisplayNode {
     
     @discardableResult
     open func withHeight(_ height: CGFloat) -> ASDisplayNode {
-        style.preferredSize.width = height
+        style.preferredSize.height = height
         return self
     }
     
@@ -65,6 +67,28 @@ extension ASDisplayNode {
         layer.borderColor = color.cgColor
         return self
     }
+    
+    @discardableResult
+    open func padTop(_ top: CGFloat) -> ASLayoutSpec {
+        return ASInsetLayoutSpec(insets: .init(top: top, left: 0, bottom: 0, right: 0),
+                                 child: self)
+    }
+
+    open func padBottom(_ bottom: CGFloat) -> ASLayoutSpec {
+        return ASInsetLayoutSpec(insets: .init(top: 0, left: 0, bottom:bottom , right: 0),
+                                 child: self)
+    }
+
+    open func padLeft(_ left: CGFloat) -> ASLayoutSpec {
+        return ASInsetLayoutSpec(insets: .init(top: 0, left: left, bottom: 0, right: 0),
+                                 child: self)
+    }
+    
+    open func padRight(_ right: CGFloat) -> ASLayoutSpec {
+        return ASInsetLayoutSpec(insets: .init(top: 0, left: 0, bottom: 0, right: right),
+                                 child: self)
+    }
+
 }
 
 extension UIEdgeInsets {
